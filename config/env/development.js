@@ -1,7 +1,7 @@
 //Development configuration options
 module.exports = {
     
-    //specifying database name
+    //specifying database connection parameter
     db: 'mongodb://localhost/smrestapi',
     
     //secret string to sign the session identifier

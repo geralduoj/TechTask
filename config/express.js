@@ -28,8 +28,9 @@ module.exports = function () {
     }));
 
     // Load the routing files
-    
-
+    require('../app/routes/register.server.routes.js')(app);
+    require('../app/routes/login.server.routes.js')(app);
+    require('../app/routes/actions.server.routes.js')(app)
     // Return the Express application instance
     return app;
 
