@@ -1,5 +1,6 @@
 // Load the module dependencies
 const mongoose = require('mongoose');
+const crypto = require('crypto');
 const Schema = mongoose.Schema;
 
 // Define a new 'UserSchema'

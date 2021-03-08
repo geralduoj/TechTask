@@ -4,5 +4,5 @@ module.exports = function (app) {
     var register = require("../controllers/register.server.controller");
 
     // Get request made
-    app.get('/', register.getRegister);
+    app.post('/api/add-user', register.signup);
 }
