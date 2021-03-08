@@ -4,6 +4,7 @@ const express = require('express');
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
 const session = require('express-session');
+const passport = require('passport');
 
 // Define the Express configuration method
 module.exports = function () {
@@ -27,10 +28,15 @@ module.exports = function () {
         secret: config.sessionSecret // secret used to sign the session ID cookie
     }));
 
+    // Configure the Passport middleware
+	app.use(passport.initialize()); // Bootstrapping the passport module
+	app.use(passport.session()); // Keep track of user's session
+    
     // Load the routing files
     require('../app/routes/register.server.routes.js')(app);
     require('../app/routes/login.server.routes.js')(app);
     require('../app/routes/actions.server.routes.js')(app)
+    
     // Return the Express application instance
     return app;
 
