@@ -4,7 +4,9 @@
   "description": "REST api exposing CRUD functionalities of a social media application",
   "main": "server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server",
+    "dev": "nodemon server"
   },
   "keywords": [
     "node",
@@ -13,5 +15,13 @@
     "rest"
   ],
   "author": "Gerald Uchie-Okoro",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "mongodb": "^3.6.4",
+    "mongoose": "^5.11.19",
+    "morgan": "^1.10.0"
+  }
 }
